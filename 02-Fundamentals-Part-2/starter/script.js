@@ -9,7 +9,7 @@ const calcAgeCall = (birthYear) => currentYear - birthYear;
 Parameter is the placeholder in the function
 Argument is the the actual value to replace the parameter
 
-functionName(parameter){
+functionName(parameter(s)){
   doSomething
 }
 
@@ -100,8 +100,10 @@ console.log(yearsUntilRetirementWName(1991, 'Justin'));
 
 //************************************************* Functions Calling Other Functions
 /*
-
+NOTE When using "return" the function scope is immediately exited and any other lines will not be executed! 
+Global Scope > Local Scope > Function Scope > Block Scope
 */
+
 
 // Function to be called
 const cutPieces = fruit => fruit * 4;
@@ -129,3 +131,38 @@ const canYouRetire = (birthYear)=>{
 
 canYouRetire(1991);
 canYouRetire(1950);
+
+
+//QUIZ SAMPLE
+
+//************************************************* CHALLENGE #1
+/*
+Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently.
+
+Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
+
+A team only wins if it has at least double the average score of the other team. Otherwise, no team wins!
+*/
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3; 
+
+
+let scoreDolphins = calcAverage(85,54,41);
+let scoreKoalas = calcAverage(23,34,27);
+
+console.log(scoreDolphins, scoreKoalas);
+
+
+
+const checkWinner = function (avgDolphins, avgKoalas){
+    if (avgDolphins >= (avgKoalas * 2)) {
+        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+    } else if (avgKoalas >= (avgDolphins * 2) ) {
+        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+    } else {
+        console.log('No team wins...');
+    }
+}
+
+
+checkWinner(scoreDolphins, scoreKoalas); //✅
