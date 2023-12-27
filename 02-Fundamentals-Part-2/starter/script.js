@@ -1,3 +1,12 @@
+//************************************************* JAVASCRIPT INTRO RECAP EXPRESSIONS VS. STATEMENTS 
+/*
+At its core, an expression is a bit of JavaScript code that produces a value.
+A JavaScript program is a sequence of statements. Each statement is an instruction for the computer to do something.
+
+Here's how I like to think about this: statements are the rigid structure that holds our program together, while expressions fill in the details.
+Statements often have "slots" for expressions. We can put any expression we like into those slots.
+*/
+
 'use strict';
 
 const currentYear = new Date().getFullYear();
@@ -166,3 +175,47 @@ const checkWinner = function (avgDolphins, avgKoalas){
 
 
 checkWinner(scoreDolphins, scoreKoalas); //✅
+
+
+
+//************************************************* ARRAYS
+/*
+Arrays are version of data structures and are zero indexed based. Brackets in arrays can have any expression in them which can produce a value.
+*/
+
+const friends = ['Micheal', 'Steven', 'Peter'];
+
+const years = new Array(1991, 1998, 'Nineteen Nighty Nine');
+
+console.log(friends, years[0], years[2]);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
