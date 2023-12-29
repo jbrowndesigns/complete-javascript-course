@@ -184,15 +184,17 @@ Arrays are version of data structures and are zero indexed based. Brackets in ar
 */
 
 const friends = ['Micheal', 'Steven', 'Peter'];
-
 const years = new Array(1991, 1998, 'Nineteen Nighty Nine');
+
 
 console.log(friends, years[0], years[2]);
 console.log(friends.length);
 console.log(friends[friends.length - 1]);
 
+// Mutate - Change array
 
-
+friends[2] = 'Jay';
+console.log(friends);
 
 
 
