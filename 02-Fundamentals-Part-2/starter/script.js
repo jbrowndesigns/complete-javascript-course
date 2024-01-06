@@ -106,6 +106,7 @@ const yearsUntilRetirementWName = (birthYear, firstName) => {
 }
 
 console.log(yearsUntilRetirementWName(1991, 'Justin'));
+console.log('END OF ARROW FUNCTION EXAMPLES');
 
 //************************************************* Functions Calling Other Functions
 /*
@@ -140,7 +141,7 @@ const canYouRetire = (birthYear)=>{
 
 canYouRetire(1991);
 canYouRetire(1950);
-
+console.log('END OF FUNCTIONS CALLING OTHER FUNCTIONS');
 
 //QUIZ SAMPLE
 
@@ -175,26 +176,45 @@ const checkWinner = function (avgDolphins, avgKoalas){
 
 
 checkWinner(scoreDolphins, scoreKoalas); //✅
-
+console.log('END OF CHALLENGE #1');
 
 
 //************************************************* ARRAYS
 /*
-Arrays are version of data structures and are zero indexed based. Brackets in arrays can have any expression in them which can produce a value.
+Arrays are version of data structures(non-privative*) and are zero indexed based. Brackets in arrays can have any expression in them which can produce a value.
+
+*Non-privative means that arrays are mutable and can be changed, even if declared with const.
 */
 
 const friends = ['Micheal', 'Steven', 'Peter'];
-const years = new Array(1991, 1998, 'Nineteen Nighty Nine');
+const justinsBirthyear = 1991;
+const years = new Array(justinsBirthyear, 1991 + 7, 'Nineteen Nighty Nine', );
 
-
-console.log(friends, years[0], years[2]);
-console.log(friends.length);
+console.log(friends);
+console.log(justinsBirthyear, years[1]);
+console.log(friends, friends.length);
 console.log(friends[friends.length - 1]);
 
-// Mutate - Change array
-
+// MUTATE ARRAYS
+// NOTE Cannot reassign a declared array to a new array, but you can change the values in the array
+// friends = ['Bob', 'Alice']; //❌ 
 friends[2] = 'Jay';
 console.log(friends);
+
+
+//Exercise
+const calcAgeArray = function(birthYear){
+  return 2037 - birthYear;
+}
+
+const birthYears = [1990, 1967, 2002, 2010, 2018];
+
+const ageOne = calcAgeArray(birthYears[0]);
+const ageTwo = calcAgeArray(birthYears[1]);
+const ageThree = calcAgeArray(birthYears[2]);
+
+console.log(ageOne, ageTwo, ageThree);
+
 
 
 
