@@ -215,7 +215,33 @@ const ageThree = calcAgeArray(birthYears[2]);
 
 console.log(ageOne, ageTwo, ageThree);
 
+//************************************************* ARRAY METHODS
+/*
+Array methods are predetermined functions that can be called on arrays. These methods also return values that can be stored in variables such as the example below.
+*/
 
+const friends2 = ['Micheal', 'Steven', 'Peter'];
+
+const newLength = friends2.push('Jay');
+console.log(newLength); // 4
+
+friends2.push('Bob'); //Adds to the end of the array
+friends2.unshift('John'); //Adds to the beginning of the array
+console.log(friends2);
+friends2.pop(); //Removes the last element of the array
+friends2.shift(); //Removes the first element of the array
+console.log(`The position of Steven is ${friends2.indexOf('Steven')}`); //Returns the index of the element in the array, if not found returns -1
+console.log(friends2);
+
+//ES6 Method
+console.log(friends2.includes(42)); //Returns a boolean value if the element is in the array or not
+
+//USE CASE EXAMPLE
+if (friends2.includes(Number)){
+  console.log(`You have a number in your array`);
+} else {
+  console.log(`You do not have a number in your array`);
+}
 
 
 
